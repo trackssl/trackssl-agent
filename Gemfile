@@ -9,5 +9,6 @@ gem 'pry', group: [:development, :test]
 gem 'rspec', group: [:development, :test]
 gem 'rspec-expectations', group: [:development, :test]
 gem 'rufus-scheduler'
+gem 'sucker_punch'
 gem 'sqlite3'
 gem 'zeitwerk'
