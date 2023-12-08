@@ -1,0 +1,7 @@
+.git
+.env
+.rspec
+tags
+.bundle
+.gitignore
+.dockerignore
