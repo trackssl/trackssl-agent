@@ -44,6 +44,15 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+      - name: debug properties
+        env:
+          REGISTRY: ${{ env.REGISTRY }}
+          ACTOR: ${{ github.actor }}
+          TAG: ${{env.REGISTRY}}/${{ env.IMAGE_NAME }}
+        run: |
+          echo "REGISTRY: $REGISTRY"
+          echo "ACTOR: $ACTOR"
+          echo "TAG: $TAG"
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
