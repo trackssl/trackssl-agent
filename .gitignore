@@ -1,4 +1,6 @@
 db/db.*
+db/db-test.*
 .env.*
 .env
+environment.txt
 .DS_Store

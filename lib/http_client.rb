@@ -6,11 +6,12 @@ module HttpClient
       faraday.headers['Content-Type'] = 'application/json'
       faraday.headers['Accept'] = 'application/json'
       faraday.adapter Faraday.default_adapter
+      faraday.use Faraday::Response::RaiseError
     end
   end
 
   def base_url
-    ENV['TRACKSSL_URL'] || 'https://app.trackssl.com'
+    ENV['TRACKSSL_URL'].presence || 'https://app.trackssl.com'
   end
 
   def auth_token
