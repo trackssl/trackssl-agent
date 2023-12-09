@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby File.read('.ruby-version').strip
+
 gem 'active_record_migrations'
 gem 'activerecord'
 gem 'activesupport'
