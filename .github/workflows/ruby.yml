@@ -49,10 +49,12 @@ jobs:
           REGISTRY: ${{ env.REGISTRY }}
           ACTOR: ${{ github.actor }}
           TAG: ${{env.REGISTRY}}/${{ env.IMAGE_NAME }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "REGISTRY: $REGISTRY"
           echo "ACTOR: $ACTOR"
           echo "TAG: $TAG"
+          echo "TOKEN: $TOKEN"
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
