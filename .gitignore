@@ -4,3 +4,4 @@ db/db-test.*
 .env
 environment.txt
 .DS_Store
+tmp
